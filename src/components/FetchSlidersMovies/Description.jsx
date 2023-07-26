@@ -11,7 +11,7 @@ export function Description ({ descriptionIdMovie, idMovieChange, idMovie }) {
 
     const {similar} = useFetch(`https://api.themoviedb.org/3/discover/movie?api_key=e3ae20ad68ddb781c61e238b5a11eb5d&language=es-MX&sort_by=popularity.desc&&with_genres=${detailsMovie?.genres[0].id ? detailsMovie?.genres[0].id : ''}`)
 
-    const {videos} = useFetchDetails(idMovie, `https://api.themoviedb.org/3/movie/${idMovie}/videos?api_key=e3ae20ad68ddb781c61e238b5a11eb5d&language=es-ES`)
+    const {videos} = useFetchDetails(idMovie, `https://api.themoviedb.org/3/movie/${idMovie}/videos?api_key=e3ae20ad68ddb781c61e238b5a11eb5d&language=es-MX`)
 
     const similarMoviesOriginal = similar?.slice(0, 13);
 
